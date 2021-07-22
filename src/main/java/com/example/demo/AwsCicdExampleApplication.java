@@ -8,11 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("/hello")
+
 public class AwsCicdExampleApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AwsCicdExampleApplication.class, args);
+	}
+	@GetMapping("/")
+	public String ex()
+	{
+		return "Hi :) ";
 	}
 @GetMapping("/welcome")
 	public String hello()
